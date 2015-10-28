@@ -46,6 +46,7 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="cyanogenmod.permission.MODIFY_PROFILES" />
 
+    <uses-permission android:name="android.permission.SHUTDOWN" />
     <application android:label="@string/app_label"
                  android:name=".DeskClockApplication"
                  android:allowBackup="true"
@@ -121,7 +122,12 @@
                 android:theme="@style/AlarmAlertFullScreenTheme"
                 android:windowSoftInputMode="stateAlwaysHidden"
                 android:showOnLockScreen="true"
-                android:directBootAware="true" />
+                android:directBootAware="true" >
+            <intent-filter>
+                <action android:name="org.codeaurora.alarm.action.POWER_OFF_ALARM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name="ScreensaverActivity"
                 android:excludeFromRecents="true"

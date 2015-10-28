@@ -1167,5 +1167,9 @@
 
     <!--used for prompt to user storage permission status-->
     <string name="have_denied_storage_permission">You have denied storage permission,and can manually add this permission again in setting application</string>
+
+    <string name="power_on_text">Power on</string>
+    <string name="power_on_yes_text">Yes</string>
+    <string name="power_on_no_text">No</string>
 </resources>
 

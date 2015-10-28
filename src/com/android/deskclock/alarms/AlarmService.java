@@ -197,7 +197,7 @@ public class AlarmService extends Service {
             alarmIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                         Intent.FLAG_ACTIVITY_NO_USER_ACTION);
             this.startActivity(alarmIntent);
-        } else {
+        } else if (!AlarmActivity.mIsPowerOffAlarm) {
             AlarmNotifications.showAlarmNotification(this, mCurrentAlarm);
         }
         mInitialCallState = mTelephonyManager.getCallState();
